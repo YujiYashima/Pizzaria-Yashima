@@ -44,7 +44,7 @@ pizzaJson.map((pizza, index) => {
         qs(".pizzaInfo--desc").innerHTML = pizzaKey.description;
         qs(".pizzaInfo--actualPrice").innerHTML = pizzaKey.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         qs(".pizzaInfo--size.selected").classList.remove("selected");
-        qs(".pizzaInfo--count").innerHTML = modalCount;
+        qs(".pizzaInfo--qt").innerHTML = modalCount;
         qsa(".pizzaInfo--size").forEach((size, sizeIndex) => {
 
             if (sizeIndex == 2) size.classList.add("selected");
@@ -92,13 +92,13 @@ qs(".pizzaInfo--qtmenos").addEventListener('click', () => {
     if (modalCount > 1) {
 
         modalCount--;
-        qs(".pizzaInfo--count").innerHTML = modalCount;
+        qs(".pizzaInfo--qt").innerHTML = modalCount;
     }
 });
 qs(".pizzaInfo--qtmais").addEventListener('click', () => {
 
     modalCount++;
-    qs(".pizzaInfo--count").innerHTML = modalCount;
+    qs(".pizzaInfo--qt").innerHTML = modalCount;
 });
 
 /* MODIFICAR O TAMNHO DAS PIZZAS */
